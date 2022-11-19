@@ -1,6 +1,7 @@
-
+//kutsutaan funktio sivun ladattua, eikä tarvitse painaa erillisiä nappeja 
 window.onload = haeXML();
 
+//tällä functiolla haetaan pudotusvalikkoihin alueet/teatterit finnkinon xml documentista ja päivämäärät toiseen pudotuslaatikkoon
 function haeXML() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET", "https://www.finnkino.fi/xml/TheatreAreas/", true);
@@ -27,7 +28,6 @@ function haeXML() {
             }
         }
     }
-
     var dates = document.getElementById("pvm"); // päivämäärien pudotuslaatikko
 
     var d = new Date(); // haetaan tähän aina uusin päivämäärä
@@ -45,6 +45,7 @@ function haeXML() {
     }
 };
 
+//tällä funktiolla näytetään halutut tiedot kun pudostusvalikosta on valittu alue ja päivämäärä
 function valitseTeatteri() {
     var api = 'https://www.finnkino.fi/xml/Schedule/?area=';
     var theatre = document.getElementById("city").value;
@@ -63,8 +64,8 @@ function valitseTeatteri() {
             document.getElementById("vaihtoehdot").innerHTML = "Wait while I'm loading...";
         }
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var xmlDoc = xmlhttp.responseXML; /
-            var shows = xmlDoc.getElementsByTagName("Show"); //Etsitään documentista "Show" tagit
+            var xmlDoc = xmlhttp.responseXML; 
+            var shows = xmlDoc.getElementsByTagName("Show"); //Etsitään documentista show tagit
             var table = "<table>"; // Luodaan taulukkoa elokuville
             table += '<th>' + "" + '</th>';
             table += '<th>' + "Elokuva" + '</th>';
