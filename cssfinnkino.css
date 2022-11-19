@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Century Gothic", "sans-serif";
+}
+body {
+    background-image: url(popcorn4.jpg);
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    padding: 26px 12px;
+    text-align: center;
+}
+
+h1 {
+    padding: 25px;
+}
+.shows {
+    padding: 20px;
+}
+
+select {
+    font-size: 18px;
+ }

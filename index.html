@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Projekti 2a: AJAX-sovellus REST APIa hyödyntäen</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssfinnkino.css">
+</head>
+
+<body> 
+
+    <div class="wrapper">
+        <h1>Leffaan tänään?</h1>
+
+        <div class="shows">
+            <br>
+            <select name="kaupunginValinta" id="city" onchange="valitseTeatteri()" class="form-control">
+            </select>
+            <br><br>
+            <select name="paivanValinta" id="pvm" onchange="valitseTeatteri()" class="form-control">
+            </select>
+        </div>
+
+        <div id="vaihtoehdot">
+
+                <table id="taulukko">
+
+                </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
